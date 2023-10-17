@@ -1,7 +1,9 @@
 class Book:
     # deklaracja stanu - konstruktor klasy
-    def __new__(cls, *args, **kwargs):
-        return object.__new__(Book)
+    # def __new__(cls, *args, **kwargs):
+    #     return object.__new__(Book)
+    
+    # komentowanie = odkomentowanie bloku tekstu -> CTRL + /
 
     def __init__(self,id,tytul,autor,cena=30):
         self.idbook = id
@@ -14,6 +16,15 @@ class Book:
     #opis zachowania
     def create_book(self):
         print("utworzenie nowej książki...")
+        
+    def print_book(self):
+        print(f"książka: {self.tytul}, autor: {self.autor}, cena: {self.cena}, oprawa: {self.oprawa}")
+        
+        
+    def rabat(self,procent):
+        return self.cena*(procent/100)
+    
+    
 
 bk1 = Book(45,"Wiedźmin","Andrzej Sapkowski",43)
 
