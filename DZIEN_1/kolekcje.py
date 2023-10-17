@@ -105,6 +105,8 @@ print(osoba)
 osoba["zawód"] = "Programista"
 print(osoba)
 
+osoba.update(nazwisko_drugie="Kobus")
+print(osoba)
 print(osoba.keys())
 print(osoba.values())
 print(osoba.items())
@@ -112,3 +114,17 @@ print(osoba.items())
 print("_____________ Items ______________")
 for x,y in osoba.items():
     print(f"{x} : {y}")
+
+# ky = ["A","B","C","B"]
+# val = [23,56,45,24]
+#
+# nowy = dict()
+
+drugaosoba = {
+    "nazwisko":73284174832,
+    "koloroczu":"brązowe",
+    "wzrost":176
+}
+
+osoba.update(drugaosoba)
+print(osoba)
