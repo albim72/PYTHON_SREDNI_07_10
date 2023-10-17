@@ -26,3 +26,12 @@ print(calc(2,1,2,1))
 print(calc(2,1,2))
 print(calc(2,1))
 print(calc(3,2,n=10,t=2))
+
+
+#przykład3
+def ranking(*lang,nrrank):
+    print(f'ranking języków programowania nr {nrrank} -> pierwsze miejsce: {lang[0]}, '
+          f'drugie miejsce: {lang[1]}, trzecie miejsce: {lang[2]}')
+
+ranking("Python","Java","C#",nrrank=34)
+ranking("Python","Java","C++","C#","JavaScript",nrrank=36)
