@@ -41,3 +41,16 @@ class Pracownik(Osoba,Firma):
         Firma.__init__(self,nazwa,branza,miasto)
         self.stanowisko = stanowisko
         self.wynagrodzenie = wynagrodzenie
+
+    def print_pracwnik(self):
+        print(f'bane pracownika: {self.stanowisko}, wynagrodzenie: {self.wynagrodzenie} zł')
+
+    def czypracownik(self):
+        return True
+
+pr1 = Pracownik("Olga",32,56,167,"ABC","IT",
+                "Kraków","Dyrektor",11200)
+print(pr1)
+pr1.print_pracwnik()
+
+print(f'czy osoba jest pracownikiem? ({pr1.czypracownik()})')
