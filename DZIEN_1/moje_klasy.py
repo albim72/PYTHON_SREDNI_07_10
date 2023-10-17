@@ -16,8 +16,22 @@ class Osoba:
 
 
 
-
 os1 = Osoba("Nadia",1978,52,171)
 print(os1)
 
 print(f'czy osoba jest pracownikiem? ({os1.czypracownik()})')
+
+
+print("_"*40)
+
+class Firma:
+    def __init__(self,nazwa,branza,miasto):
+        self.nazwa = nazwa
+        self.branza = branza
+        self.miasto = miasto
+
+    def show_firma(self):
+        print(f'firma {self.nazwa}, branża: {self.branza}, miasto: {self.miasto}')
+
+
+        
