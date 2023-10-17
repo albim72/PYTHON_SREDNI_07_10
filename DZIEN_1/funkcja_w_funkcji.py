@@ -45,3 +45,17 @@ def rejestracja(oplata):
 print(rejestracja(1)())
 print(rejestracja(45)())
 print(rejestracja(0)())
+
+# przykład 3  list comprehension
+biglista = [2*i+1 for i in range(100_000) if i%2!=0]
+# print(biglista)
+
+#przykład4
+def startstop(funkcja):
+    def wrapper(*args):
+        print("_" * 40)
+        print("uruchomienie procesu....")
+        funkcja(*args)
+        print("zakończenie procesu!")
+    return wrapper
+
