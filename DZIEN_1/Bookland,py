@@ -1,0 +1,19 @@
+class Book:
+    # deklaracja stanu - konstruktor klasy
+    def __new__(cls, *args, **kwargs):
+        return object.__new__(Book)
+
+    def __init__(self,id,tytul,autor,cena=30):
+        self.idbook = id
+        self.tytul = tytul
+        self.autor = autor
+        self.cena = cena
+        self.oprawa='miękka'
+        self.create_book()
+
+    #opis zachowania
+    def create_book(self):
+        print("utworzenie nowej książki...")
+
+bk1 = Book(45,"Wiedźmin","Andrzej Sapkowski",43)
+
