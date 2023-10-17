@@ -34,4 +34,10 @@ class Firma:
         print(f'firma {self.nazwa}, branża: {self.branza}, miasto: {self.miasto}')
 
 
-        
+class Pracownik(Osoba,Firma):
+    def __init__(self, imie, rok_ur, waga, wzrost,nazwa,branza,miasto,
+                 stanowisko,wynagrodzenie):
+        Osoba.__init__(self,imie, rok_ur, waga, wzrost)
+        Firma.__init__(self,nazwa,branza,miasto)
+        self.stanowisko = stanowisko
+        self.wynagrodzenie = wynagrodzenie
