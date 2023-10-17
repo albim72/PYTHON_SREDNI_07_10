@@ -1,4 +1,6 @@
 #przykład 1
+import math
+
 
 def witaj(imie):
     return f'dziękujemy za założenie konta: {imie}'
@@ -59,3 +61,31 @@ def startstop(funkcja):
         print("zakończenie procesu!")
     return wrapper
 
+def zawijanie(czego):
+    print(f'zawijanie {czego} w sreberka!')
+
+zw = startstop(zawijanie)
+zw("czekoladek")
+
+@startstop
+def dmuchanie(czego):
+    print(f'dmuchanie {czego} na urodzinowym torcie!')
+
+dmuchanie("świeczek")
+
+def policz(funkcja):
+    def wrapper(*args):
+        print("podstawienie funkcji f(x)... i pierwiastek z wyniku")
+        print(f"wynik: {math.sqrt(funkcja(*args))}")
+    return wrapper
+@policz
+def suma(a,b):
+    return a+b
+
+@policz
+def policz_iloczyn(x,y):
+    return 2*x*y
+
+
+suma(5,5)
+policz_iloczyn(5,5)
