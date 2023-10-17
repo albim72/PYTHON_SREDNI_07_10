@@ -13,4 +13,13 @@ def multi(n):
 
 print(multi(7)(11))
 
+liczba = [3,12,66,-23,0,116,-8,2,15,999,-34,189,14,-2,0,90]
 
+parzysta = list(filter(lambda x:x%2==0,liczba))
+print(parzysta)
+
+cube = list(map(lambda x:x**3,liczba))
+print(cube)
+
+cube = set(map(lambda x:x**3,liczba))
+print(cube)
