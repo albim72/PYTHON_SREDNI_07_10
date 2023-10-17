@@ -2,7 +2,7 @@ class Book:
     # deklaracja stanu - konstruktor klasy
     # def __new__(cls, *args, **kwargs):
     #     return object.__new__(Book)
-    
+
     # komentowanie = odkomentowanie bloku tekstu -> CTRL + /
 
     def __init__(self,id,tytul,autor,cena=30):
@@ -13,18 +13,53 @@ class Book:
         self.oprawa='miękka'
         self.create_book()
 
+    def __repr__(self):
+        return f'książka {self.tytul}'
+
     #opis zachowania
     def create_book(self):
         print("utworzenie nowej książki...")
-        
+
     def print_book(self):
         print(f"książka: {self.tytul}, autor: {self.autor}, cena: {self.cena}, oprawa: {self.oprawa}")
-        
-        
+
+
     def rabat(self,procent):
         return self.cena*(procent/100)
-    
-    
+
+    def get_oprawa(self):
+        return self.oprawa
+
+    def get_cena(self):
+        return self.cena
+
+    def set_oprawa(self,nopr):
+        self.oprawa = nopr
+
+    def set_cena(self,ncena):
+        self.cena = ncena
+
+
 
 bk1 = Book(45,"Wiedźmin","Andrzej Sapkowski",43)
+print(bk1)
+# bk1.oprawa = "twarda"
+# bk1.cena = 78
+bk1.set_oprawa("twarda")
+bk1.set_cena(51)
+print(f'cena po zmianie: {bk1.get_cena()} zł')
+bk1.print_book()
+print(f'rabat: {bk1.rabat(11)} zł')
+print(f'kwota do zapłaty {bk1.cena - bk1.rabat(11):.2f} zł')
+
+print("_"*45)
+bk2 = Book(55,"Hobbit","JRR Tolkien",40)
+print(bk2)
+
+bk2.set_cena(44)
+print(f'cena po zmianie: {bk2.get_cena()} zł')
+bk2.print_book()
+print(f'rabat: {bk2.rabat(11)} zł')
+print(f'kwota do zapłaty {bk2.cena - bk2.rabat(11):.2f} zł')
+
 
