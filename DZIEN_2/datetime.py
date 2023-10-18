@@ -12,8 +12,12 @@ print(dir(datetime))
 print(f"minimalny rok daty: {datetime.MINYEAR}")
 print(f"maksymalny rok daty: {datetime.MAXYEAR}")
 
-print(f"zadeklarowana data: {datetime.date(1966,8,14)}")
+ts = datetime.date(1966,8,14)
+print(f"zadeklarowana data: {ts}")
 
+diff = date_object - ts
+print("Różnica czasi.....")
+print(diff)
 print(f"dolna granica daty: {date.min}")
 print(f"górna granica daty: {date.max}")
 
@@ -30,3 +34,4 @@ print(f'godzina: {a.hour}')
 print(f'minut: {a.minute}')
 print(f'sekund: {a.second}')
 print(f'mikrosekund: {a.microsecond}')
+
