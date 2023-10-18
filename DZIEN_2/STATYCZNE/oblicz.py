@@ -3,8 +3,8 @@ class Obliczenia:
         self.x=x
         self.y=y
         self.z=z
-        
-    def moblicz(self,x,y,z):
+
+    def moblicz(x,y,z):
         return (x+y)*z
-    
-Obliczenia.moblicz = staticmethod(Obliczenia.moblicz)d
+
+Obliczenia.moblicz = staticmethod(Obliczenia.moblicz)
