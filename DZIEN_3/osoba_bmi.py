@@ -5,7 +5,7 @@ if os.path.exists("bmi.txt"):
     print("Plik z danymi archiwalnymi został usunięty!")
 else:
     print("plik nie istnieje! Zostanie utworzony nowy!")
-    
+
 class Osoba:
     def __init__(self,imie,nazwisko,wiek,waga,wzrost):
         self.imie = imie
@@ -13,11 +13,11 @@ class Osoba:
         self._wiek = wiek
         self._waga = waga
         self._wzrost = wzrost
-        
+
     @property
     def wiek(self):
         return self._wiek
-    
+
     @wiek.setter
     def wiek(self,lata):
         self._wiek = lata
@@ -28,7 +28,7 @@ class Osoba:
 
     @waga.setter
     def waga(self, kg):
-        self.waga = kg
+        self._waga = kg
 
     @property
     def wzrost(self):
@@ -36,12 +36,11 @@ class Osoba:
 
     @wzrost.setter
     def wzrost(self, cm):
-        self._wiek = cm
-        
-    
-        
-        
-        
-        
-        
-        
+        self._wzrost = cm
+
+
+
+
+
+
+
