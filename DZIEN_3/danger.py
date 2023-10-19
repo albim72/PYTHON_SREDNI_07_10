@@ -28,3 +28,8 @@ for a in range(6,25,5):
         print('Zle podana funkcja!')
         break
 
+a = "68"
+
+print(a*11)
+print(eval(a)*11)
+print(float(a)*11)
