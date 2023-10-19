@@ -37,6 +37,14 @@ class Osoba:
     @wzrost.setter
     def wzrost(self, cm):
         self._wzrost = cm
+        
+    
+    @property
+    def bmi(self):
+        return self.waga/(self.wzrost/100)**2
+    
+    
+    
 
 
 
