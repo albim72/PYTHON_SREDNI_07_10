@@ -62,3 +62,8 @@ kolor.text = 'czerwony metallic'
 
 dodpos = SubElement(wypdod,'dodatkowe_poduszki')
 dodpos.text = '4'
+
+print(pretty(top))
+
+with open('subaru.xml','a',encoding='utf-8') as f:
+    f.write(pretty(top))
