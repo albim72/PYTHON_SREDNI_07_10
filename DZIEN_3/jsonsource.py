@@ -47,4 +47,18 @@ with open("pojazd.json","r",encoding="utf-8") as f:
 
 print(auto_dict)
 
+print("____________________________________________________")
+
+info = '{"organizacja":"Fundacja SCILO","miasto":"Lublin","kraj":"Polska"}'
+projekt = {"id":3455,"temat":"System rekomendacji decyzyjnej w procesach biznesowych","kwota":12345000}
+
+z = json.loads(info)
+print(z)
+
+z.update(projekt)
+print(z)
+
+info_new = json.dumps(z, indent=4)
+print(info_new)
+
 
