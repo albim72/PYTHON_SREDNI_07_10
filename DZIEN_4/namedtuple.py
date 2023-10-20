@@ -9,7 +9,7 @@ print(f'sesja, student nr {getattr(s,"nr")}')
 stdli = ['Olga Nowak',23,423255]
 stddic = {'name':'Adam Kowal','age':20,'nr':14343314}
 print(f"\ninstancja krotki nazwanej dla listy stdli -> {Student._make(stdli)}")
-# sinst = Student._asdict()
+print(f"\ninstancja krotki nazwanej dla dict stddic -> {s._asdict()}")
 print(f"\ninstancja krotki nazwanej dla słownika stddic -> {Student(**stddic)}")
 
 print(f'pola krotki: {Student._fields}')
