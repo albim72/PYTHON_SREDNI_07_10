@@ -29,3 +29,13 @@ for i in itertools.count(5,5):
         break
     else:
         print(i, end = " ")
+print()
+print("*"*50)
+#przykład 3
+count = 0
+for i in itertools.cycle('ABCDE'):
+    if count > 7:
+        break
+    else:
+        print(i, end=" ")
+        count += 1
