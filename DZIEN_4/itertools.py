@@ -50,3 +50,9 @@ iterators = itertools.cycle(cykl)
 
 for i in range(18):
     print(next(iterators),end=" ")
+
+print()
+print("*"*50)
+#przykład 5
+
+print(f'szybkie wyświetlenie wartości: {list(itertools.repeat(25,16))}')
