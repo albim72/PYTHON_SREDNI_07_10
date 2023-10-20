@@ -2,6 +2,7 @@ import math
 import operator
 import time
 import itertools
+from itertools import product
 
 #przykład 1
 L1 = [1,2,3]
@@ -56,3 +57,14 @@ print("*"*50)
 #przykład 5
 
 print(f'szybkie wyświetlenie wartości: {list(itertools.repeat(25,16))}')
+
+print()
+print("*"*50)
+#przykład 6
+
+print(f"iloczyn kartezjański z użyciem kontenrów: {list(product(['trening','psychika','walka'],['2','5']))}")
+print("\n")
+print(f"iloczyn kartezjański z użyciem kontenrów - drugi przypadek: {list(product('ABC',[4,6,8,9]))}")
+print("\n")
+print(f"iloczyn kartezjański z użyciem reapeat: {list(product([1,3,5],repeat=4))}")
+
