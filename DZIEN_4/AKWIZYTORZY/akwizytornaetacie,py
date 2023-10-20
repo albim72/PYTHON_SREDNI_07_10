@@ -1,0 +1,35 @@
+from decimal import Decimal
+from akwizytor import Akwizytor
+
+class Akwizytornaetacie(Akwizytor):
+    """
+       Pracownik, którego wynagrodzenie jest złożne z  prowizji
+       od sprzedaży oraz stałej pensji
+    """
+
+    def __init__(self, imie, nazwisko, nr_ubezpieczenia, sprzedaz, prowizja, pensja):
+        super().__init__(imie, nazwisko, nr_ubezpieczenia, sprzedaz, prowizja)
+        self.pensja = pensja
+        
+    @property
+    def pensja(self):
+        return self._pensja
+    
+    @pensja.setter
+    def pensja(self,kwota):
+        if kwota < Decimal('0.00'):
+            raise ValueError('wynagrodzenie ryczałtowe musi być większe')
+        
+        self._pensja = kwota
+
+    @property
+    def wynagrodzenie(self):
+        return super().wynagrodzenie + self.pensja
+
+    def __repr__(self):
+        return 'Etatowy: '  + super().__repr__() +  f'\nryczałt: {self.pensja:.2f}'
+    
+    
+    
+    
+    
