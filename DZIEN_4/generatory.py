@@ -36,4 +36,25 @@ for i in wznowienie(7,3):
     print("_"*30)
     print(f'zwrócono wartość: {i}')
 
+#przykład3
+
+def gen():
+    x=0
+    while True:
+        y = yield x
+        if y is None:
+            x = x+1
+        else:
+            x=y
+
+g = gen()
+
+print(next(g))
+print(next(g))
+print(next(g))
+
+print(g.send(119))
+print(next(g))
+print(next(g))
+
 
