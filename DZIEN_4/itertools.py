@@ -39,3 +39,14 @@ for i in itertools.cycle('ABCDE'):
     else:
         print(i, end=" ")
         count += 1
+
+print()
+print("*"*50)
+#przykład 4
+
+cykl = ['sen','dieta','trening siłowy','trening wysiłkowy','badania']
+
+iterators = itertools.cycle(cykl)
+
+for i in range(18):
+    print(next(iterators),end=" ")
