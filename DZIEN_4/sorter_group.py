@@ -20,3 +20,10 @@ print(numbers)
 so2 = Sorter(group2)
 numbers.sort(key=so2)
 print(numbers)
+
+class Test:
+    def __call__(self, n):
+        print(f"to jest wynik działania metody call() --> {n}")
+
+t = Test()
+t(23)
